@@ -1,10 +1,8 @@
 # Pi Simulation with raylib
 
-This is my attempt at calculating Pi using a method [discussed by YouTuber 3Brown1Blue](https://www.youtube.com/watch?v=6dTyOl1fmDo) with [raylib](https://www.raylib.com/) and [Physac](https://github.com/victorfisac/Physac).
+This is my attempt at calculating Pi using a method [discussed by YouTuber 3Brown1Blue](https://www.youtube.com/watch?v=6dTyOl1fmDo) with [raylib](https://www.raylib.com/) and [Physac](https://github.com/victorfisac/Physac). It's borked.
 
 ## Compilation
-
-This uses 
 
 ### Desktop
 
@@ -25,3 +23,7 @@ cd build
 emcmake cmake .. -DPLATFORM=Web -DCMAKE_BUILD_TYPE=Release -DCMAKE_EXECUTABLE_SUFFIX=".html"
 emmake make
 ```
+
+### LICENSE
+
+[LICENSE](LICENSE)

@@ -40,7 +40,7 @@ typedef struct GameState {
     Color background;
 } GameState;
 
-void UpdateDrawFrame(GameState* game);     // Update and Draw one frame
+void UpdateDrawFrame(void* game);     // Update and Draw one frame
 
 void reset(GameState* game, bool start) {
     if (!start) {
@@ -87,7 +87,8 @@ int main() {
     return 0;
 }
 
-void UpdateDrawFrame(GameState* game) {
+void UpdateDrawFrame(void* userdata) {
+    GameState* game = (GameState*)userdata;
 
     if (IsMouseButtonReleased(MOUSE_BUTTON_LEFT)) {
         //reset(game, false);

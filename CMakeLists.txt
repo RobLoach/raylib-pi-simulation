@@ -26,8 +26,9 @@ set_property(TARGET ${PROJECT_NAME} PROPERTY C_STANDARD 99)
 
 # Web Configurations
 if (EMSCRIPTEN)
+    set_target_properties(${project_name_raylib} PROPERTIES OUTPUT_NAME "index")
     set_target_properties(${PROJECT_NAME} PROPERTIES SUFFIX ".html")
-    set(CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} -s USE_GLFW=3 -s ASSERTIONS=1 -s WASM=1 -s ASYNCIFY -s GL_ENABLE_GET_PROC_ADDRESS=1")
+    set(CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} -s USE_GLFW=3 -s ASSERTIONS=1 -s WASM=1 -s ASYNCIFY -s GL_ENABLE_GET_PROC_ADDRESS=1 --shell-file ${CMAKE_CURRENT_LIST_DIR}/shell.html")
 endif()
 
 # Checks if OSX and links appropriate frameworks (Only required on MacOS)
